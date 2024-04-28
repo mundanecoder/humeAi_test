@@ -11,9 +11,14 @@ export default function ClientComponent({
   accessToken: string;
 }) {
   return (
-    <VoiceProvider auth={{ type: "accessToken", value: accessToken }}>
-      <Messages />
-      <Controls />
-    </VoiceProvider>
+    <div
+      className="border flex-col h-96 w-screen flex justify-center items-center dark:text-red-200 text-black items-center text-4xl font-extrabold bg-gray-900"
+      style={{ border: "1px solid black" }}
+    >
+      <VoiceProvider auth={{ type: "accessToken", value: accessToken }}>
+        <Messages />
+        <Controls />
+      </VoiceProvider>
+    </div>
   );
 }
